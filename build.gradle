@@ -28,6 +28,7 @@ configurations.all {
   exclude module: "junit"
 }
 
+apply plugin: 'idea'
 apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'spring-boot'
@@ -35,6 +36,7 @@ apply plugin: 'spring-boot'
 repositories {
   mavenLocal()
   mavenCentral()
+  maven { url 'http://repo.spring.io/snapshot' }
   maven { url "http://repo.spring.io/release" }
   jcenter()
 }
